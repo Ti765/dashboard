@@ -1,16 +1,17 @@
 import type { SVGProps } from 'react';
+import { cn } from "@/lib/utils"; // Assuming cn is in lib/utils
 
-const SaturnIcon = (props: SVGProps<SVGSVGElement> & { isAnimated?: boolean }) => {
-  const { isAnimated, className, ...rest } = props;
+const SaturnIcon = (props: SVGProps<SVGSVGElement> & { isAnimated?: boolean; title?: string }) => {
+  const { isAnimated, className, title = "FiscalFlux Icon", ...rest } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
-      // width="40" // Removed for better CSS-driven responsiveness
-      // height="40" // Removed for better CSS-driven responsiveness
       className={cn("fill-current text-primary", className, isAnimated ? "animate-spin-slow" : "")}
+      role="img"
       {...rest}
     >
+      <title>{title}</title>
       <defs>
         <style>
           {`
@@ -31,10 +32,5 @@ const SaturnIcon = (props: SVGProps<SVGSVGElement> & { isAnimated?: boolean }) =
     </svg>
   );
 };
-
-// cn utility function definition (if not globally available or for isolated component)
-// Typically, you'd import this from '@/lib/utils'
-const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(' ');
-
 
 export default SaturnIcon;

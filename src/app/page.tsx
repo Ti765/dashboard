@@ -1,11 +1,12 @@
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import HeroSection from "@/components/sections/hero-section";
 import ToolsMetricsSection from "@/components/sections/tools-metrics-section";
-import DataVisualizationSection from "@/components/sections/data-visualization-section";
 import AiInsightsSection from "@/components/sections/ai-insights-section";
 import GradientDisplay from "@/components/ui/gradient-display";
 import { Separator } from "@/components/ui/separator";
+import DynamicDataVizWrapper from "@/components/dynamic-data-viz-wrapper"; // Import the new wrapper
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <HeroSection />
         <ToolsMetricsSection />
         <Separator className="my-0 border-neutral-800" />
-        <DataVisualizationSection />
+        <DynamicDataVizWrapper /> {/* Use the new wrapper */}
         <Separator className="my-0 border-neutral-800" />
         <AiInsightsSection />
         
