@@ -50,7 +50,7 @@ export default function ToolsMetricsSection() {
         <p className="text-center text-neutral-400 mb-12 max-w-xl mx-auto">
           Acesse rapidamente as funcionalidades essenciais para a gestão fiscal eficiente e visualize seus principais indicadores.
         </p>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {tools.map((tool, index) => (
             <ToolCard 
               key={index} 
