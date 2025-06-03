@@ -22,7 +22,7 @@ const chartConfig = {
     label: "Despesas",
     color: "hsl(var(--accent))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function DataVisualizationSection() {
   return (
@@ -40,7 +40,7 @@ export default function DataVisualizationSection() {
             <CardDescription className="text-neutral-400">Comparativo dos últimos 6 meses</CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="h-[300px] w-full">
+            <ChartContainer config={chartConfig} className="w-full aspect-video">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData} margin={{ top: 20, right: 20, left: -20, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
