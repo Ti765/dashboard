@@ -6,8 +6,8 @@ const SaturnIcon = (props: SVGProps<SVGSVGElement> & { isAnimated?: boolean }) =
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
-      width="40"
-      height="40"
+      // width="40" // Removed for better CSS-driven responsiveness
+      // height="40" // Removed for better CSS-driven responsiveness
       className={cn("fill-current text-primary", className, isAnimated ? "animate-spin-slow" : "")}
       {...rest}
     >
