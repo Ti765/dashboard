@@ -1,6 +1,7 @@
+
 "use client"
 
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis, Tooltip as RechartsTooltip } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip as RechartsTooltip } from "recharts"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChartConfig, ChartContainer, ChartTooltipContent } from "@/components/ui/chart"
 
@@ -40,20 +41,18 @@ export default function DataVisualizationSection() {
             <CardDescription className="text-neutral-400">Comparativo dos últimos 6 meses</CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="w-full aspect-video">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData} margin={{ top: 20, right: 20, left: -20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                  <XAxis dataKey="month" tickLine={false} axisLine={false} stroke="hsl(var(--muted-foreground))" />
-                  <YAxis tickLine={false} axisLine={false} stroke="hsl(var(--muted-foreground))" tickFormatter={(value) => `R$${value / 1000}k`} />
-                  <RechartsTooltip
-                    cursor={{ fill: "hsla(var(--muted), 0.2)" }}
-                    content={<ChartTooltipContent indicator="dot" />}
-                  />
-                  <Bar dataKey="revenue" fill="var(--color-revenue)" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="expenses" fill="var(--color-expenses)" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
+            <ChartContainer config={chartConfig} className="w-full aspect-video h-[500px] md:h-[600px]"> {/* Ajustei altura para desktop */}
+              <BarChart data={chartData} margin={{ top: 20, right: 20, left: -20, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                <XAxis dataKey="month" tickLine={false} axisLine={false} stroke="hsl(var(--muted-foreground))" />
+                <YAxis tickLine={false} axisLine={false} stroke="hsl(var(--muted-foreground))" tickFormatter={(value) => `R$${value / 1000}k`} />
+                <RechartsTooltip
+                  cursor={{ fill: "hsla(var(--muted), 0.2)" }}
+                  content={<ChartTooltipContent indicator="dot" />}
+                />
+                <Bar dataKey="revenue" fill="var(--color-revenue)" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="expenses" fill="var(--color-expenses)" radius={[4, 4, 0, 0]} />
+              </BarChart>
             </ChartContainer>
           </CardContent>
         </Card>
