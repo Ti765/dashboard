@@ -5,7 +5,7 @@ export default function PrivacyPage() {
   return (
     <div className="flex flex-col min-h-screen bg-neutral-900">
       <Header />
-      <main className="flex-grow container mx-auto px-6 py-12">
+      <main className="flex-grow w-full mx-auto px-6 py-12 2xl:max-w-none">
         <h1 className="font-display text-4xl font-bold text-neutral-100 mb-8">Política de Privacidade</h1>
         <div className="prose prose-invert max-w-none text-neutral-300 space-y-4">
           <p>Sua privacidade é importante para nós. É política do FiscalFlux respeitar sua privacidade em relação a qualquer informação sua que possamos coletar no site FiscalFlux, e outros sites que possuímos e operamos.</p>

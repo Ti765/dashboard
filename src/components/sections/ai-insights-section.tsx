@@ -57,7 +57,7 @@ export default function AiInsightsSection() {
 
   return (
     <section id="ai-insights" className="py-16 md:py-24 bg-neutral-900">
-      <div className="container mx-auto px-6">
+      <div className="w-full mx-auto px-6 2xl:max-w-none">
         <h2 className="font-display text-3xl font-bold text-center text-neutral-100 mb-4">
           Insights com Inteligência Artificial <Wand2 className="inline-block ml-2 h-8 w-8 text-primary" />
         </h2>
@@ -80,7 +80,7 @@ export default function AiInsightsSection() {
                   value={fiscalData}
                   onChange={(e) => setFiscalData(e.target.value)}
                   placeholder="Insira seus dados fiscais aqui..."
-                  className="custom-input mt-1 min-h-[100px]"
+                  className="custom-input mt-1 min-h-24"
                   rows={4}
                 />
               </div>

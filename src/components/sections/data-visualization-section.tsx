@@ -28,7 +28,7 @@ const chartConfig = {
 export default function DataVisualizationSection() {
   return (
     <section id="data-visualization" className="py-16 md:py-24 bg-neutral-800">
-      <div className="container mx-auto px-6">
+      <div className="w-full mx-auto px-6 2xl:max-w-none">
         <h2 className="font-display text-3xl font-bold text-center text-neutral-100 mb-4">
           Visualização de Dados
         </h2>
@@ -41,7 +41,11 @@ export default function DataVisualizationSection() {
             <CardDescription className="text-neutral-400">Comparativo dos últimos 6 meses</CardDescription>
           </CardHeader>
           <CardContent>
-            <ChartContainer config={chartConfig} className="w-full aspect-video h-[500px] md:h-[600px]"> {/* Ajustei altura para desktop */}
+            <ChartContainer
+              config={chartConfig}
+              className="w-full aspect-video"
+              style={{ height: "clamp(400px, 50vh, 800px)" }}
+            >
               <BarChart data={chartData} margin={{ top: 20, right: 20, left: -20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
                 <XAxis dataKey="month" tickLine={false} axisLine={false} stroke="hsl(var(--muted-foreground))" />

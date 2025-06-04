@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-neutral-700 bg-neutral-900 text-neutral-400">
-      <div className="container mx-auto flex flex-col items-center justify-between px-6 py-8 sm:flex-row">
+      <div className="w-full mx-auto px-6 py-8 2xl:max-w-none flex flex-col items-center justify-between sm:flex-row">
         <div className="flex items-center space-x-2">
           <SaturnIcon className="h-6 w-6 text-neutral-500" />
           <p className="text-sm">

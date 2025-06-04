@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section id="hero" className="py-20 md:py-32 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
-      <div className="container mx-auto px-6 text-center">
+      <div className="w-full mx-auto px-6 2xl:max-w-none text-center">
         <h1 className="font-display text-4xl font-bold text-neutral-100 sm:text-5xl md:text-6xl lg:text-7xl">
           Bem-vindo ao <span className="text-primary">FiscalFlux</span>
         </h1>
