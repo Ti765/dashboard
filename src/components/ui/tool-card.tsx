@@ -14,13 +14,13 @@ interface ToolCardProps {
 export default function ToolCard({ title, description, icon: IconComponent, isLoading, className, iconColorClassName = "text-primary" }: ToolCardProps) {
   if (isLoading) {
     return (
-      <Card className="bg-neutral-800 shadow-md hover:shadow-lg transition duration-200 transform hover:-translate-y-1 w-full h-full min-h-[180px]">
+      <Card className="bg-neutral-800 shadow-md hover:shadow-lg transition duration-200 transform hover:-translate-y-1 w-full h-full min-h-44 flex flex-col items-center justify-center">
         <CardHeader className="items-center text-center">
-          <Skeleton className="h-8 w-8 rounded-full mb-2" />
-          <Skeleton className="h-6 w-3/4" />
+          <Skeleton className="h-[1em] w-8 rounded-full mb-2" />
+          <Skeleton className="h-[1em] w-3/4" />
         </CardHeader>
         <CardContent className="text-center">
-          <Skeleton className="h-4 w-1/2 mx-auto" />
+          <Skeleton className="h-[1em] w-1/2 mx-auto" />
         </CardContent>
       </Card>
     );

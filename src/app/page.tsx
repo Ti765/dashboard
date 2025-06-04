@@ -22,7 +22,7 @@ export default function Home() {
         
         {/* Example of GradientDisplay as per prompt */}
         <section className="py-16 md:py-24 bg-neutral-800">
-          <div className="container mx-auto px-6">
+          <div className="w-full mx-auto px-6 2xl:max-w-none">
             <h2 className="font-display text-3xl font-bold text-center text-neutral-100 mb-12">
               Demonstração de Gradiente Dinâmico
             </h2>
