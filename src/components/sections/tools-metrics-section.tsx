@@ -42,7 +42,7 @@ const tools = [
 
 export default function ToolsMetricsSection() {
   return (
-    <section id="tools" className="py-16 md:py-24 bg-neutral-900">
+    <section id="tools" className="py-16 md:py-24 bg-neutral-800">
       <div className="w-full mx-auto px-6 2xl:max-w-none">
         <h2 className="font-display text-3xl font-bold text-center text-neutral-100 mb-4">
           Ferramentas e Métricas
