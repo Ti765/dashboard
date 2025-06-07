@@ -19,6 +19,15 @@ export default {
           900: "#000000",
         },
       },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5%)' },
+        },
+      },
+      animation: {
+        float: 'float 10s ease-in-out infinite alternate',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
