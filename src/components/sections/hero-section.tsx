@@ -1,30 +1,40 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import React from "react";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative bg-black overflow-hidden py-20 md:py-32">
-      <div className="pointer-events-none absolute -top-20 -left-40 w-[400px] h-[400px] bg-red-500 rounded-full blur-3xl opacity-50" />
-      <div className="pointer-events-none absolute -bottom-20 -right-40 w-[400px] h-[400px] bg-blue-600 rounded-full blur-3xl opacity-50" />
-      <img
-        src="/saturn_loop_transparent_1200dense.gif"
-        alt="Planeta animado"
-        className="pointer-events-none absolute inset-0 m-auto w-[600px] max-w-none opacity-20 animate-float"
+    <section
+      id="hero"
+      className="relative bg-black bg-hero-light bg-cover bg-center overflow-hidden"
+      style={{ minHeight: "100vh" }}
+    >
+      {/* camada de luzes suaves */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-hero-light opacity-80 animate-pulse-light"
+        aria-hidden="true"
       />
-      <div className="relative z-10 max-w-2xl mx-auto px-6 text-center">
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-100">
-          Bem-vindo ao <span className="text-primary">FiscalFlux</span>
+
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
+        <h1 className="font-space font-bold text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+          Bem-vindo ao FiscalFlux
         </h1>
-        <p className="mt-6 text-lg md:text-xl text-neutral-300">
-          Seu painel fiscal futurista para insights e controle financeiro simplificados.
-        </p>
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <Button size="lg" className="bg-primary text-primary-foreground px-8 py-3 rounded-md shadow-lg hover:shadow-primary/50" asChild>
-            <Link href="#tools">Explorar Ferramentas</Link>
-          </Button>
-          <Button variant="outline" size="lg" className="border-primary text-primary px-8 py-3 rounded-md hover:bg-primary/10" asChild>
-            <Link href="#ai-insights">Ver Insights IA</Link>
-          </Button>
+        <img
+          src="/saturn_loop_transparent_1200dense.gif"
+          alt="Planeta Saturno animado"
+          className="mt-6 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mix-blend-screen animate-float"
+        />
+        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <a
+            href="#iniciar"
+            className="px-6 py-3 text-white font-medium rounded-md border border-white/30 bg-white/5 hover:bg-white/10 transition"
+          >
+            Começar Agora
+          </a>
+          <a
+            href="#saiba-mais"
+            className="px-6 py-3 text-white font-medium rounded-md border border-white/30 hover:bg-white/10 transition"
+          >
+            Saiba Mais
+          </a>
         </div>
       </div>
     </section>
