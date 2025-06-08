@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neutral-900: 0 0% 0%;    /* #000000 - preto puro para fundo principal */
+  --neutral-800: 240 2% 12%; /* #1E1E20 - cinza escuro para seções alternadas */
+}
+
+/* Remove focus rings unless keyboard nav */
+*:focus-visible { @apply outline-none ring-2 ring-accent; }
